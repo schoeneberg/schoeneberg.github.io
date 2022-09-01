@@ -3,27 +3,28 @@
 
 <head>
 <title>Nils Sch&ouml;neberg</title>
+<link rel="stylesheet" href="styles.css">
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
-
-<link rel="stylesheet" href="styles.css">
+<script src="collapsed.js" defer></script>
+<script src="tabs.js" defer></script>
 
 
 </head>
 
-<body style="margin: 0; background-image:url(carina_nebula_JWST.jpg); background-position:center top; background-attachment:fixed; ">
+<body style="margin: 0; background-image:url(carina_nebula_JWST.jpg); background-position:center top; background-attachment:fixed; overflow:scroll">
 <div class="topnav">
-  <a class="active" href="index.html">Home</a>
-  <a href="cv/index.html">CV</a>
-  <a href="resources/index.html">Resources</a>
-  <a href="codes/index.html">Codes</a>
+  <button class="tablink" onclick="openPage('Home', this, '#04AA6D')" id="defaultOpen">Home</button>
+  <button class="tablink" onclick="openPage('CV', this, '#7fb5db')">CV</button>
+  <button class="tablink" onclick="openPage('Resources', this, '#6371ff')">Resources</button>
+  <button class="tablink" onclick="openPage('Code', this, '#7d001d')">Code</button>
 </div>
 
 <div style="display:block; padding:0; margin:0; background-color: transparent;">
-  <div style="height: 20vh;background-color: transparent; ">
+  <div style="height: 30vh;background-color: transparent; ">
       <div class="vertical-center" style="height:100%; position:relative">
-        <div style="left: 10%; width:25%;height:100%; position:absolute; display:flex; justify-content:center; align-items:center;">
-          <div class="circular--portrait" style="height: 10vh; width: 8vh;">
+        <div style="left: 5%; width:25%;height:100%; position:absolute; display:flex; justify-content:center; align-items:center;">
+          <div class="circular--portrait" style="height: 20vh; width: 15vh;">
             <img src="profile.jpg" alt="Profile picture" style="color:white;"> </img>
           </div>
         </div>
@@ -33,64 +34,91 @@
       </div>
   </div>
   <div class="wrapper">
-    <div style="width:50%; margin:auto;">
-      <p>Maria de Maetzu Postdoctoral Research Fellow at ICCUB.</p>
-      
-      <p>
+    <div style="width:100%; margin:auto;">
+      <div id="Home" class="contenttab">
+          <p>Maria de Maetzu Postdoctoral Research Fellow at ICCUB.</p>
+          
+          <p>
 
-      <p> I am a postgraduate researcher at ICCUB specialized in cosmology.</p>
-      <p> a </p>
-      <p> a </p>
-      <p> a </p>
-      <p> a </p>
-      <p> My research focusses on </p>
-      <p> Topic 1 </p>
-      <p> Topic 2 </p>
-      <p> Topic 3 </p>
-      <p> a </p>
-      <p> a </p>
-      <p> a </p>
-      <p> a </p>
-      <p> a </p>
-      <p> a </p>
-      <p> a </p>
-      <p> a </p>
-      <p> a </p>
-      <p> a </p>
-      <p> a </p>
-      <p> a </p>
-      <p> a </p>
-      <p> a </p>
-      <p> a </p>
-      <p> a </p>
-      <p> a </p>
-      <p> a </p>
-      <p> a </p>
-      <p> a </p>
-      <p> a </p>
-      <p> a </p>
-      <p> a </p>
-      <p> a </p>
-      <p> a </p>
-      <p> a </p>
-      <p> a </p>
-      <p> a </p>
-      <p> a </p>
-      <p> a </p>
-      <p> a </p>
-      <p> a </p>
-      <p> a </p>
-      <p> a </p>
-      <p> a </p>
-      <p> a </p>
-      <p> a </p>
-      <p> a </p>
-      <p> a </p>
+          <p> I am a postgraduate researcher at ICCUB specialized in cosmology.</p>
+          
+          <div style="padding-top:5em;padding-bottom:5em">
+          <p> My research focusses on various topics, detailed below </p>
+          <button class="collapsed"> Topic 1 </button>
+          <div class="panel"> <p> topic 1 explanation </p> </div>
+          <button class="collapsed"> Topic 2 </button>
+          <div class="panel"> <p> topic 2 explanation </p> </div>
+          <button class="collapsed"> Topic 3 </button>
+          <div class="panel"> <p> topic 3 explanation </p> </div>
+          </div>
+          <p> Another cool thing </p>
+          <p> a </p>
+          <p> a </p>
+          <p> a </p>
+          <p> a </p>
+          <p> a </p>
+          <p> a </p>
+          <p> a </p>
+          <p> a </p>
+          <p> a </p>
+          <p> a </p>
+          <p> a </p>
+          <p> a </p>
+          <p> a </p>
+          <p> a </p>
+          <p> a </p>
+          <p> a </p>
+          <p> a </p>
+          <p> a </p>
+          <p> a </p>
+          <p> a </p>
+          <p> a </p>
+          <p> a </p>
+          <p> a </p>
+          <p> a </p>
+          <p> a </p>
+          <p> a </p>
+          <p> a </p>
+          <p> a </p>
+          <p> a </p>
+          <p> a </p>
+          <p> a </p>
+          <p> a </p>
+          <p> a </p>
+          <p> a </p>
+          <p> a </p>
+          <p> a </p>
+          <p> a </p>
+          <p> a </p>
+      </div>
       
+      <div id="CV" class="contenttab">
+        <p> TESTING TESTING CV </p>
+        <p> CV </p>
+        <p> Publications </p>
+        <p> Teaching </p>
+      </div>
+      
+      <div id="Resources" class="contenttab">
+        <p> TESTING TESTING Resources </p>
+        <p> Teaching </p>
+        <p> Outreach </p>
+      </div>
+      
+      
+      <div id="Code" class="contenttab">
+        <p> TESTING TESTING CV </p>
+        <p> Class </p>
+        <p> MontePython </p>
+        <p> Liquidcosmo </p>
+      </div>
      </div>
   </div>
-  <div style="height: 20vh;background-color: transparent; ">  
-  </div>
+  
+  
+  <!-- Bottom spacing -->
+  <div style="height: 20vh;background-color: transparent; "> </div>
+  <!-- Bottom stuff -->
   <div style="height: 20vh;background-color: #525252;">
     <div class="vertical-center" style="height:60%; padding-top:1em;">
       <div style="width:30%;"> 
@@ -102,9 +130,11 @@
         <p style="color:white"> <a class="whitelink" href="mailto:nils.science@gmail.com"> nils.science@gmail.com</a> <br> Marti' i Franques 1 <br> E08028 Barcelona SPAIN </p>
       </div>
     </div>
+
   </div>
 </div>
 </body>
+
 
 <!<link rel="shortcut icon" type="image/jpg" href="Favicon_Image_Location"/>
 <!<div style="background-image: url('Image_Location'); background-size: cover; height:480px; padding-top:80px;">
