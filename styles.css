@@ -1,10 +1,68 @@
-.wrapper {
-  width: 80%;
-  padding: 1em;
-  background-color: green;
+html {
+    height: 100%;
+    width: 100%;
 }
 
+body {
+  font-family: Verdana;
+}
+
+@font-face { font-family: madetommy; src: url('made_tommy_medium.otf'); } 
+
+h1 {
+  font-size: 50px;
+  font-family: madetommy;
+}
+  
+.circular--landscape {
+  display: inline-block;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 50%; 
+  } 
+.circular--landscape img { 
+  width: auto;
+  height: 100%;
+  margin-left: -0px;
+}
+.circular--portrait {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 50%;
+} 
+.circular--portrait img {
+  width: 100%;
+  height: auto;
+  margin-top: -0px;
+}
+
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  text-align:center;
+  padding: 1em;
+  background-color: white;
+}
+
+.whitelink:link{
+  color:#b8b8b8;
+  text-decoration:none;
+}
+.whitelink:visited{
+  color:#8a8a8a;
+  text-decoration:none;
+}
+.responsive {
+  max-width: 100%;
+  height: auto;
+}
 .topnav {
+  font-family:Times New Roman;
   overflow: hidden;
   background-color: #333;
 }
@@ -26,11 +84,22 @@
   color:white;
 }
 p {
-  color: red;
+  color: black;
+}
+.vertical-center{
+  text-align:center;
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
 @media screen and (max-width: 500px) {
   .navbar a {
     float: none;
     display: block;
+  }
+  
+  h1 {
+    font-size: 20px;
+    font-family: madetommy;
   }
 }
