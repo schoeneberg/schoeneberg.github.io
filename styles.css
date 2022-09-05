@@ -10,7 +10,7 @@ body {
 @font-face { font-family: madetommy; src: url('made_tommy_medium.otf'); } 
 
 h1 {
-  font-size: 50px;
+  font-size: min(max(10vw, 20px),100px);
   font-family: madetommy;
 }
 
@@ -87,7 +87,7 @@ h1 {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 20px;
+  font-size: max(4vh,50px);
   border: none;
 }
 
@@ -119,6 +119,7 @@ p {
   border: none;
   outline: none;
   transition: 0.4s;
+  font-size: max(4vh,50px);
 }
 
 .collapsedactive, .collapsed:hover {
@@ -127,7 +128,7 @@ p {
 
 .collapsed:after {
   content: '\02795'; /* Unicode character for "plus" sign (+) */
-  font-size: 13px;
+  font-size: max(4vh,50px);
   color: #777;
   float: right;
   margin-left: 5px;
@@ -148,10 +149,5 @@ p {
   .navbar a {
     float: none;
     display: block;
-  }
-  
-  h1 {
-    font-size: 20px;
-    font-family: madetommy;
   }
 }
