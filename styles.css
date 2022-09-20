@@ -10,7 +10,7 @@ body {
 @font-face { font-family: madetommy; src: url('made_tommy_medium.otf'); } 
 
 h1 {
-  font-size: min(max(10vw, 20px),100px);
+  font-size: min(max(10vw, 20px),80px);
   font-family: madetommy;
 }
 
@@ -87,7 +87,7 @@ h1 {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: max(4vh,50px);
+  font-size: 20px;
   border: none;
 }
 
@@ -119,7 +119,7 @@ p {
   border: none;
   outline: none;
   transition: 0.4s;
-  font-size: max(4vh,50px);
+  font-size: 25px;
 }
 
 .collapsedactive, .collapsed:hover {
@@ -128,7 +128,6 @@ p {
 
 .collapsed:after {
   content: '\02795'; /* Unicode character for "plus" sign (+) */
-  font-size: max(4vh,50px);
   color: #777;
   float: right;
   margin-left: 5px;
@@ -145,9 +144,29 @@ p {
   overflow: hidden;
 }
 
-@media screen and (max-width: 500px) {
-  .navbar a {
-    float: none;
-    display: block;
+@media only screen and (max-device-width: 400px) {
+  .topnav button {
+    float: left;
+    color: #f2f2f2;
+    background-color: transparent;
+    font-family:Times New Roman;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 80px;
+    border: none;
+  }
+  
+  .collapsed {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: center;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    font-size: 70px;
   }
 }
