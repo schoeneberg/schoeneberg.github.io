@@ -144,6 +144,15 @@ p {
   overflow: hidden;
 }
 
+
+p a:link {
+  color:#506687;
+  text-decoration:none;
+}
+p a:visited {
+  color:#1f457d;
+  text-decoration:none;
+}
 @media only screen and (max-device-width: 400px) {
   .topnav button {
     float: left;
